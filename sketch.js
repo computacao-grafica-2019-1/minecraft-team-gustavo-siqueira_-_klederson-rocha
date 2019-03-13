@@ -73,24 +73,12 @@ function draw(r, l, h) {
 }
 
 function keyTyped() {
-  if (key === 'a' || key === 'A') {
-    moveArmR=-25;
-  }
-  else if (key === 'q' || key === 'Q') {
-    moveArmR=25;
-  }
-  else if (key === 'd' || key === 'D') {
-    moveArmL=25;
-  }
-  else if (key === 'e' || key === 'E') {
-    moveArmL=-25;
-  }
-  else if (key === 's' || key === 'S') {
-    moveHead=-20;
-  }
-  else if (key === 'w' || key === 'W') {
-    moveHead=20;
-  }
+  if (key === 'a' || key === 'A') moveArmR=-25;
+  else if (key === 'q' || key === 'Q') moveArmR=25;
+  else if (key === 'd' || key === 'D') moveArmL=25;
+  else if (key === 'e' || key === 'E') moveArmL=-25;
+  else if (key === 's' || key === 'S') moveHead=-20;
+  else if (key === 'w' || key === 'W') moveHead=20;
   else if (key === 'x' || key === 'X') {
     moveArmR=0;
     moveArmL=0;
