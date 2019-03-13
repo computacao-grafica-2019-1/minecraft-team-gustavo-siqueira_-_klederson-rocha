@@ -3,7 +3,7 @@ var moveArmL;
 var moveHead;
 
 function draw(r, l, h) {
-  createCanvas(500, 500);
+  createCanvas(450, 450);
   background(240);
   smooth();
   noStroke();
@@ -58,7 +58,18 @@ function draw(r, l, h) {
   translate(x-50, y+40);
   fill(192);
   rect(0, -20, 40, 105);
-  pop(); 
+  pop();
+  
+  //caption
+  fill(0);
+  textSize(10);
+  text('Levantar Braço Direito: Q', 10, 10);
+  text('Abaixar Braço Direito: A', 10, 20);
+  text('Levantar Braço Esquerdo: E', 10, 30);
+  text('Abaixar Braço Esquerdo: D', 10, 40);
+  text('Mover Cabeça para Esquerda: W', 10, 50);
+  text('Mover Cabeça para Direita: S', 10, 60);
+  text('Limpar Valores das Posições: X', 10, 70);
 }
 
 function keyTyped() {
