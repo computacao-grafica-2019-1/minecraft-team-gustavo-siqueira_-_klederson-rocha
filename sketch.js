@@ -61,7 +61,7 @@ function draw(r, l, h) {
   pop(); 
 }
 
-function keyPressed() {
+function keyTyped() {
   if (key === 'a' || key === 'A') {
     moveArmR=-25;
   }
