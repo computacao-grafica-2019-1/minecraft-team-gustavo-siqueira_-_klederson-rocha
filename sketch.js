@@ -1,23 +1,23 @@
 var moveArmR;
 var moveArmL;
+var moveHead;
 
-function setup() {
+function draw(r, l, h) {
   createCanvas(500, 500);
   background(240);
   smooth();
   noStroke();
-}
-
-function draw(r, l) {
+                     
   x=width/2;
   y=height/2;
   this.r=moveArmR;
   this.l=moveArmL;
+  this.h=moveHead;
   
   //head
   push();
   translate(x, y-120);
-  rotate(radians());
+  rotate(radians(moveHead));
   fill(192);
   rect(-30, -60, 60, 60);
   pop();
@@ -74,8 +74,15 @@ function keyPressed() {
   else if (key === 'e' || key === 'E') {
     moveArmL=-25;
   }
-  else {
-  	moveArmR=0;
+  else if (key === 's' || key === 'S') {
+    moveHead=-20;
+  }
+  else if (key === 'w' || key === 'W') {
+    moveHead=20;
+  }
+  else if (key === 'x' || key === 'X') {
+    moveArmR=0;
     moveArmL=0;
+    moveHead=0;
   }
 }
